@@ -51,7 +51,11 @@ void printTempatures(const TempatureRecord temps[], int& size) {
 }
 // TODO: Step 7 - Implement printTemperatures()
 // Print all stored temperatures in a formatted table
-
+void printTempatures(const TempatureRecord temps[], int size) {
+    for (int i = 0; i < size; ++i) {
+        cout << setw(2) << temps[i].day << setw(6) << temps[i].tempature << endl;
+    }
+}
 // TODO: Step 8 - Implement findMin()
 // Return the TemperatureRecord with the lowest temperature
 
