@@ -27,9 +27,9 @@ int main() {
     int size = 0;  // Actual number of records read
 
     // TODO: Step 3 - Call readTemperatures() to load data from file
-
+    readTemperatures(temps, size);
     // TODO: Step 4 - Print the temperatures
-
+    printTempatures(temps, size);
     // TODO: Step 5 - Compute and display min, max, and average temperature
 
     return 0;
@@ -37,7 +37,7 @@ int main() {
 
 // TODO: Step 6 - Implement readTemperatures()
 // Read from "temps.txt" and store data in the array
-void printTempatures(const TempatureRecord temps[], int& size) {
+void readTempatures(const TempatureRecord temps[], int& size) {
     ifstream inFile("temps.txt");
     if (!inFile) {
         cout << "Error, Could not open file." << endl;
