@@ -14,11 +14,11 @@ struct TempatureRecord {
 const int MAX_DAYS = 31;
 
 // Function Prototypes
-void readTemperatures(???); // TODO: Fix the parameters
-void printTemperatures(const ???);
-TemperatureRecord findMin(const ???);
-TemperatureRecord findMax(const ???);
-double findAverage(const ???);
+void readTemperatures(TempatureRecord temps[], int &size); // TODO: Fix the parameters
+void printTemperatures(const TempatureRecord temps[], int size);
+TemperatureRecord findMin(const TempatureRecord temps[], int size);
+TemperatureRecord findMax(const TempatureRecord temps[], int size);
+double findAverage(const TempatureRecord temps[], int size);
 
 int main() {
     // TODO: Step 2 - Declare an array of TemperatureRecord structs (MAX_DAYS size)
