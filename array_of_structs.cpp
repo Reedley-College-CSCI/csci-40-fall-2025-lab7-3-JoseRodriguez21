@@ -42,6 +42,12 @@ void printTempatures(const TempatureRecord temps[], int& size) {
     if (!inFile) {
         cout << "Error, Could not open file." << endl;
     }
+    size = 0;
+    while (inFile >> temps[size].day >> temps[size].tempature) {
+        size++;
+        if (size >= 31) break;
+    }
+    inFile.close();
 }
 // TODO: Step 7 - Implement printTemperatures()
 // Print all stored temperatures in a formatted table
