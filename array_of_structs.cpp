@@ -39,9 +39,9 @@ int main() {
 // Read from "temps.txt" and store data in the array
 void printTempatures(const TempatureRecord temps[], int& size) {
     ifstream inFile("temps.txt");
-        if (!inFile) {
-            cout << "Error, Could not open file." << endl;
-        }
+    if (!inFile) {
+        cout << "Error, Could not open file." << endl;
+    }
 }
 // TODO: Step 7 - Implement printTemperatures()
 // Print all stored temperatures in a formatted table
