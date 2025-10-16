@@ -31,7 +31,20 @@ int main() {
     // TODO: Step 4 - Print the temperatures
     printTemperatures(temps, size);
     // TODO: Step 5 - Compute and display min, max, and average temperature
+    double avg = findAverage(temps, size);
+    
+    TemperatureRecord maxData = findMax(temps, size);
+    TemperatureRecord minData = findMin(temps, size);
 
+    cout << fixed << setprecision(2) << endl;
+
+    cout << "Average Tempature: " << avg << " degrees fahrenheit" << endl;
+    
+    cout << "Maximum Tempature: " << maxData.temperature << " degrees fahrenheit on day "
+        << maxData.day << endl;
+    
+    cout << "Minimum Tempature: " << minData.temperature << " degrees fahrenheit on day "
+        << minData.day << endl;
     return 0;
 }
 
