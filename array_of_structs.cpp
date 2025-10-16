@@ -86,3 +86,10 @@ TemperatureRecord findMax(const TemperatureRecord temps[], int size) {
 }
 // TODO: Step 10 - Implement findAverage()
 // Compute and return the average temperature
+double findAverage(const TemperatureRecord temps[], int size) {
+    int total = 0;
+    for (int i = 0; i < size; ++i) {
+        total += temps[i].temperature;
+    }
+    return static_cast<double>(total) / size;
+}
