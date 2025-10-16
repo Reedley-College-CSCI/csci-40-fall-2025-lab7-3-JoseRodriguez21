@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <string>
 using namespace std;
 
 // TODO: Step 1 - Define the struct TemperatureRecord
@@ -50,13 +51,16 @@ int main() {
 
 // TODO: Step 6 - Implement readTemperatures()
 // Read from "temps.txt" and store data in the array
-void readTemperatures(const TemperatureRecord temps[], int& size) {
+void readTemperatures(TemperatureRecord temps[], int& size) {
     ifstream inFile("temps.txt");
     if (!inFile) {
         cout << "Error, Could not open file." << endl;
     }
+
     size = 0;
-    while (inFile >> temps[size].day >> temps[size].temperature) {
+    while (inFile) {
+        inFile >> temps[size].day;
+        inFile >> temps[size].temperature;
         size++;
         if (size >= 31) break;
     }
