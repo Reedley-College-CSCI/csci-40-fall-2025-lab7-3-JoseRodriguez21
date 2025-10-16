@@ -58,7 +58,18 @@ void printTempatures(const TempatureRecord temps[], int size) {
 }
 // TODO: Step 8 - Implement findMin()
 // Return the TemperatureRecord with the lowest temperature
+TempatureRecord findMin(const TempatureRecord temps[], int size) {
+    TempatureRecord min = { 0,0 };
+    if (size == 0) return min;
 
+    min = temps[0];
+
+    for (int i = 1; i < size; ++i) {
+        if (temps[i].tempature < min.tempature) {
+            min = temps[i];
+        }
+    }
+}
 // TODO: Step 9 - Implement findMax()
 // Return the TemperatureRecord with the highest temperature
 
